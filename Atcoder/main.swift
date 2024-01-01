@@ -19,10 +19,26 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC081B - Shift only
+let numberOfCount = Int(readLine()!)!
+var nums = readLine()!.split(separator: " ").map { Int(String($0))! }
+
+var count = 0
+
+while true {
+    nums = nums.filter { $0 % 2 == 0 }.map { $0 / 2 }
+    if nums.count != numberOfCount {
+        break
+    }
+    count += 1
+}
+
+print(count)
+
 //MARK: - ABC081A - Placing Marbles
-let input = readLine()!
-let result = input.filter { $0 == "1" }.count
-print(result)
+//let input = readLine()!
+//let result = input.filter { $0 == "1" }.count
+//print(result)
 
 
 //MARK: - ABC086A - Product

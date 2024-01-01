@@ -19,21 +19,41 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
-//MARK: - ABC081B - Shift only
-let numberOfCount = Int(readLine()!)!
-var nums = readLine()!.split(separator: " ").map { Int(String($0))! }
+//MARK: - ABC087B - Coins
+let fiveHundred = Int(readLine()!)!
+let hundred = Int(readLine()!)!
+let five = Int(readLine()!)!
+let target = Int(readLine()!)!
 
 var count = 0
 
-while true {
-    nums = nums.filter { $0 % 2 == 0 }.map { $0 / 2 }
-    if nums.count != numberOfCount {
-        break
+for i in 0...fiveHundred {
+    for j in 0...hundred {
+        for k in 0...five {
+            if i * 500 + j * 100 + k * 50 == target {
+                count += 1
+            }
+        }
     }
-    count += 1
 }
 
 print(count)
+
+//MARK: - ABC081B - Shift only
+//let numberOfCount = Int(readLine()!)!
+//var nums = readLine()!.split(separator: " ").map { Int(String($0))! }
+//
+//var count = 0
+//
+//while true {
+//    nums = nums.filter { $0 % 2 == 0 }.map { $0 / 2 }
+//    if nums.count != numberOfCount {
+//        break
+//    }
+//    count += 1
+//}
+//
+//print(count)
 
 //MARK: - ABC081A - Placing Marbles
 //let input = readLine()!

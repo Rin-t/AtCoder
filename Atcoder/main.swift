@@ -19,6 +19,12 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC081A - Placing Marbles
+let input = readLine()!
+let result = input.filter { $0 == "1" }.count
+print(result)
+
+
 //MARK: - ABC086A - Product
 //let nums = readLine()!.split(separator: " ").map { Int(String($0))! }
 //let isEven = nums.reduce(1, *) % 2 == 0

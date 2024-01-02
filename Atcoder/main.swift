@@ -19,6 +19,34 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC049C - 白昼夢
+
+//let words = ["dream", "dreamer", "erase", "eraser"]
+//var S = readLine()!
+//
+//while !S.isEmpty {
+//    var isFound = false
+//
+//    for word in words {
+//        if S.hasSuffix(word) {
+//            isFound = true
+//            S.removeLast(word.count)
+//            break
+//        }
+//    }
+//
+//    if S.isEmpty {
+//        print("YES")
+//        break
+//    }
+//
+//    if !isFound {
+//        print("NO")
+//        break
+//    }
+//}
+
+
 //MARK: - ABC085C - Otoshidam
 //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 //let N = input[0]

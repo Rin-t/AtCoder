@@ -19,6 +19,40 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC085C - Otoshidam
+//let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//let N = input[0]
+//var Y = input[1]
+//
+//func execute() {
+//    for tenThousand in 0...N {
+//        for fiveThousand in 0...N - tenThousand {
+//            let thousand = N - tenThousand - fiveThousand
+//            let total = tenThousand * 10000 + fiveThousand * 5000 + thousand * 1000
+//            if total == Y {
+//                print("\(tenThousand) \(fiveThousand) \(thousand)")
+//                return
+//            }
+//        }
+//    }
+//    print("-1 -1 -1")
+//}
+//
+//execute()
+
+//while Y >= 1000 {
+//    Y -= 1000
+//    thousand += 1
+//}
+//
+//let subtract = N - thousand
+//
+//if subtract % 9 == 0 || subtract % 4 == 0 {
+//
+//} else {
+//    print("-1 -1 -1")
+//}
+
 //MARK: - ABC085B - Kagami Mochi
 //let N = Int(readLine()!)!
 //var nums: Set<Int> = []

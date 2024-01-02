@@ -19,6 +19,23 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC088B - Card Game for Two
+let N = Int(readLine()!)!
+let cards = readLine()!.split(separator: " ").map { Int(String($0))! }.sorted { $0 > $1 }
+
+var result = 0
+
+for i in 0..<N {
+    if i % 2 == 0 {
+        result += cards[i]
+    } else {
+        result -= cards[i]
+    }
+}
+
+print(result)
+
+
 //MARK: - ABC083B - Some Sums
 //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 //let N = input[0]

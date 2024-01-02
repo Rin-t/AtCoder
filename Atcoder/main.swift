@@ -19,21 +19,31 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC085B - Kagami Mochi
+//let N = Int(readLine()!)!
+//var nums: Set<Int> = []
+//
+//for _ in 0..<N {
+//    nums.insert(Int(readLine()!)!)
+//}
+//
+//print(nums.count)
+
 //MARK: - ABC088B - Card Game for Two
-let N = Int(readLine()!)!
-let cards = readLine()!.split(separator: " ").map { Int(String($0))! }.sorted { $0 > $1 }
-
-var result = 0
-
-for i in 0..<N {
-    if i % 2 == 0 {
-        result += cards[i]
-    } else {
-        result -= cards[i]
-    }
-}
-
-print(result)
+//let N = Int(readLine()!)!
+//let cards = readLine()!.split(separator: " ").map { Int(String($0))! }.sorted { $0 > $1 }
+//
+//var result = 0
+//
+//for i in 0..<N {
+//    if i % 2 == 0 {
+//        result += cards[i]
+//    } else {
+//        result -= cards[i]
+//    }
+//}
+//
+//print(result)
 
 
 //MARK: - ABC083B - Some Sums

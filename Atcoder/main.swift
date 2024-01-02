@@ -19,25 +19,41 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+//MARK: - ABC083B - Some Sums
+//let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//let N = input[0]
+//let A = input[1]
+//let B = input[2]
+//
+//var sum = 0
+//
+//for i in 0...N {
+//    let digitSum = String(i).map { $0.wholeNumberValue! }.reduce(0, +)
+//    if A <= digitSum && digitSum <= B {
+//        sum += i
+//    }
+//}
+//
+//print(sum)
+
 //MARK: - ABC087B - Coins
-let fiveHundred = Int(readLine()!)!
-let hundred = Int(readLine()!)!
-let five = Int(readLine()!)!
-let target = Int(readLine()!)!
-
-var count = 0
-
-for i in 0...fiveHundred {
-    for j in 0...hundred {
-        for k in 0...five {
-            if i * 500 + j * 100 + k * 50 == target {
-                count += 1
-            }
-        }
-    }
-}
-
-print(count)
+//let fiveHundred = Int(readLine()!)!
+//let hundred = Int(readLine()!)!
+//let five = Int(readLine()!)!
+//let target = Int(readLine()!)!
+//
+//var count = 0
+//
+//for i in 0...fiveHundred {
+//    for j in 0...hundred {
+//        for k in 0...five {
+//            if i * 500 + j * 100 + k * 50 == target {
+//                count += 1
+//            }
+//        }
+//    }
+//}
+//print(count)
 
 //MARK: - ABC081B - Shift only
 //let numberOfCount = Int(readLine()!)!

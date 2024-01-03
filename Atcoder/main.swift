@@ -5,6 +5,7 @@
 //  Created by Rin on 2023/12/30.
 //
 
+//MARK: - 勉強に使用したサイト
 // AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
@@ -14,49 +15,94 @@
 // SwiftでAtCoder
 // https://qiita.com/kntkymt/items/4f02c6b90462f354de6d
 
+// AtCoder Beginners Selection
+// https://atcoder.jp/contests/abs
+
 import Foundation
+
+//MARK: - AtCoder Problems
+// https://kenkoooo.com/atcoder#/table/RinTake
+
+//MARK: - B - Christmas Trees
+//let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//let A = input[0]
+//let M = input[1]
+//let L = input[2]
+//let R = input[3]
+//
+//func execute() {
+//
+//    let firstTree: Int
+//    if A >= L {
+//        firstTree = A - ((A - L) / M) * M
+//    } else {
+//        var toL = (L - A) % M
+//        if toL == 0 {
+//            firstTree = L
+//        } else {
+//            firstTree = L + M - toL
+//        }
+//    }
+//
+//    // 座標Rまでにいくつのツリーがあるか計算
+//    if firstTree > R {
+//        return print(0)
+//    } else {
+//        return print(1 + (R - firstTree) / M)
+//    }
+//}
+//
+//execute()
+
+//MARK: - A - Christmas Present (1:52)
+//let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//let bat = input[0]
+//let grove = input[1]
+//
+//print(bat > grove ? "Bat" : "Glove")
+
+
 
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
-
 //MARK: - ABC086C - Traveling
 
-let N = Int(readLine()!)!
-var points: [(t: Int, x: Int, y: Int)] = []
-
-for _ in 1...N {
-    let input = readLine()!.split(separator: " ").map { Int(String($0))! }
-    let t = input[0]
-    let x = input[1]
-    let y = input[2]
-    points.append((t, x, y))
-}
-
-func execute() {
-    var currentPoint = (t: 0, x:0, y:0)
-
-    for nextPoint in points {
-
-        let distance = abs(nextPoint.x - currentPoint.x) + abs(nextPoint.y - currentPoint.y)
-        let moveAmount = nextPoint.t - currentPoint.t
-
-        if moveAmount < distance {
-            return print("No")
-        }
-
-        if (moveAmount - distance) % 2 != 0 {
-            return print("No")
-        }
-
-        currentPoint = nextPoint
-
-    }
-
-    print("Yes")
-}
-
-execute()
+//let N = Int(readLine()!)!
+//var points: [(t: Int, x: Int, y: Int)] = []
+//
+//for _ in 1...N {
+//    let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//    let t = input[0]
+//    let x = input[1]
+//    let y = input[2]
+//    points.append((t, x, y))
+//}
+//
+//func execute() {
+//    var currentPoint = (t: 0, x:0, y:0)
+//
+//    for nextPoint in points {
+//
+//        let distance = abs(nextPoint.x - currentPoint.x) + abs(nextPoint.y - currentPoint.y)
+//        let moveAmount = nextPoint.t - currentPoint.t
+//
+//        if moveAmount < distance {
+//            return print("No")
+//        }
+//
+//        if (moveAmount - distance) % 2 != 0 {
+//            return print("No")
+//        }
+//
+//        currentPoint = nextPoint
+//
+//    }
+//
+//    print("Yes")
+//}
+//
+//execute()
 
 
 

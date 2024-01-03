@@ -19,6 +19,48 @@ import Foundation
 //MARK: - AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
+
+//MARK: - ABC086C - Traveling
+
+let N = Int(readLine()!)!
+var points: [(t: Int, x: Int, y: Int)] = []
+
+for _ in 1...N {
+    let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+    let t = input[0]
+    let x = input[1]
+    let y = input[2]
+    points.append((t, x, y))
+}
+
+func execute() {
+    var currentPoint = (t: 0, x:0, y:0)
+
+    for nextPoint in points {
+
+        let distance = abs(nextPoint.x - currentPoint.x) + abs(nextPoint.y - currentPoint.y)
+        let moveAmount = nextPoint.t - currentPoint.t
+
+        if moveAmount < distance {
+            return print("No")
+        }
+
+        if (moveAmount - distance) % 2 != 0 {
+            return print("No")
+        }
+
+        currentPoint = nextPoint
+
+    }
+
+    print("Yes")
+}
+
+execute()
+
+
+
+
 //MARK: - ABC049C - 白昼夢
 
 //let words = ["dream", "dreamer", "erase", "eraser"]

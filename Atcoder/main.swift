@@ -20,9 +20,45 @@
 
 import Foundation
 
+
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
+//MARK: - ABC 333
+
+//MARK: - C - Repunit Trio
+
+
+//MARK: - B - Pentagon
+
+//let S = readLine()!
+//let T = readLine()!
+//
+//let array: [Character] = ["A", "B", "C", "D", "E"]
+//
+//var disS = abs(array.firstIndex(of: S.first!)! - array.firstIndex(of: S.last!)!)
+//disS = min(disS, 5 - disS)
+//
+//var disT = abs(array.firstIndex(of: T.first!)! - array.firstIndex(of: T.last!)!)
+//disT = min(disT, 5 - disT)
+//
+//print(disS == disT ? "Yes" : "No")
+
+//MARK: - A - Three Threes
+
+//let N = Int(readLine()!)!
+//
+//var result = ""
+//
+//for _ in 1...N {
+//    result += String(N)
+//}
+//
+//print(result)
+
+
+
+//MARK: - ABC 334
 //MARK: - B - Christmas Trees
 //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 //let A = input[0]

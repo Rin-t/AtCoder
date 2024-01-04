@@ -25,6 +25,33 @@ import Foundation
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
+func main() {
+
+}
+
+main()
+
+//MARK: - ABC 332
+//MARK: - A - Online Shopping
+//let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//let N = input[0]
+//let S = input[1]
+//let K = input[2]
+//
+//var totalPrice = 0
+//
+//for _ in 1...N {
+//    let price = readLine()!.split(separator: " ").map { Int(String($0))! }.reduce(1, *)
+//    totalPrice += price
+//}
+//
+//if totalPrice < S {
+//    totalPrice += K
+//}
+//
+//print(totalPrice)
+
+
 //MARK: - ABC 333
 
 //MARK: - C - Repunit Trio
@@ -43,7 +70,6 @@ import Foundation
 //
 //let sortedSum = sum.sorted()
 //print(sortedSum[N - 1])
-
 
 
 

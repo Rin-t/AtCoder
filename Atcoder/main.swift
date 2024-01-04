@@ -11,6 +11,7 @@
 
 // 勉強方法参考記事
 // https://qiita.com/e869120/items/f1c6f98364d1443148b3
+// https://qiita.com/kotaaaa/items/ddcf7f3e92e789731a7e
 
 // SwiftでAtCoder
 // https://qiita.com/kntkymt/items/4f02c6b90462f354de6d
@@ -27,6 +28,23 @@ import Foundation
 //MARK: - ABC 333
 
 //MARK: - C - Repunit Trio
+//let N = Int(readLine()!)!
+//
+//let repunits = (1...12).map { Int(String(repeating: "1", count: $0))! }
+//
+//var sum: Set<Int> = []
+//for i in repunits {
+//    for j in repunits {
+//        for k in repunits {
+//            sum.insert(i + j + k)
+//        }
+//    }
+//}
+//
+//let sortedSum = sum.sorted()
+//print(sortedSum[N - 1])
+
+
 
 
 //MARK: - B - Pentagon

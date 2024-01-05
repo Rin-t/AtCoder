@@ -25,11 +25,6 @@ import Foundation
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
-func main() {
-
-}
-
-main()
 
 //MARK: - ABC 332
 //MARK: - A - Online Shopping
@@ -51,6 +46,34 @@ main()
 //
 //print(totalPrice)
 
+//MARK: - B - Glass and Mug
+
+//func main() {
+//    let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+//    let K = input[0]
+//    let G = input[1]
+//    let M = input[2]
+//
+//    var gAmount = 0
+//    var mAmount = 0
+//
+//    for _ in 1...K {
+//
+//        if gAmount == G {
+//            gAmount = 0
+//        } else if mAmount == 0 {
+//            mAmount = M
+//        } else {
+//            let moveAmount = min(G - gAmount, mAmount)
+//            gAmount += moveAmount
+//            mAmount -= moveAmount
+//        }
+//    }
+//
+//    print("\(gAmount) \(mAmount)")
+//}
+//
+//main()
 
 //MARK: - ABC 333
 

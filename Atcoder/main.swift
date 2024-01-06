@@ -39,39 +39,31 @@ func readThreeInts() -> (a: Int, b: Int, c: Int) {
     return (a: ints[0], b: ints[1], c: ints[2])
 }
 
-//MARK: - C - T-shirts
 
+
+//MARK: - ABC 331
+//MARK: - A - Tomorrow
 //func main() {
-//    let (N, M) = readTwoInts()
-//    let S = readLine()!.map { $0.wholeNumberValue! }
 //
-//    var usedMuji = 0
-//    var usedLogo = 0
+//    let (M, D) = readTwoInts()
+//    var (y, m, d) = readThreeInts()
 //
-//    var needLogo = 0
-//
-//    for plan in S {
-//        if plan == 0 {
-//            usedMuji = 0
-//            usedLogo = 0
-//        } else if plan == 1 {
-//            if usedMuji < M {
-//                usedMuji += 1
-//            } else {
-//                usedLogo += 1
-//            }
-//        } else if plan == 2 {
-//            usedLogo += 1
+//    if d < D {
+//        d += 1
+//    } else {
+//        d = 1
+//        if m < M {
+//            m += 1
+//        } else {
+//            m = 1
+//            y += 1
 //        }
-//
-//        needLogo = max(usedLogo, needLogo)
-//
 //    }
-//    print(needLogo)
+//
+//    print("\(y) \(m) \(d)")
 //}
 //
 //main()
-
 
 //MARK: - ABC 332
 //MARK: - A - Online Shopping
@@ -118,6 +110,39 @@ func readThreeInts() -> (a: Int, b: Int, c: Int) {
 //    }
 //
 //    print("\(gAmount) \(mAmount)")
+//}
+//
+//main()
+
+//MARK: - C - T-shirts
+
+//func main() {
+//    let (N, M) = readTwoInts()
+//    let S = readLine()!.map { $0.wholeNumberValue! }
+//
+//    var usedMuji = 0
+//    var usedLogo = 0
+//
+//    var needLogo = 0
+//
+//    for plan in S {
+//        if plan == 0 {
+//            usedMuji = 0
+//            usedLogo = 0
+//        } else if plan == 1 {
+//            if usedMuji < M {
+//                usedMuji += 1
+//            } else {
+//                usedLogo += 1
+//            }
+//        } else if plan == 2 {
+//            usedLogo += 1
+//        }
+//
+//        needLogo = max(usedLogo, needLogo)
+//
+//    }
+//    print(needLogo)
 //}
 //
 //main()

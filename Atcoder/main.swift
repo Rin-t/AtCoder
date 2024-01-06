@@ -25,6 +25,53 @@ import Foundation
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
+func readInts() -> [Int] {
+    return readLine()!.split(separator: " ").map { Int(String($0))! }
+}
+
+func readTwoInts() -> (a: Int, b: Int) {
+    let ints = readLine()!.split(separator: " ").map { Int(String($0))! }
+    return (a: ints[0], b: ints[1])
+}
+
+func readThreeInts() -> (a: Int, b: Int, c: Int) {
+    let ints = readLine()!.split(separator: " ").map { Int(String($0))! }
+    return (a: ints[0], b: ints[1], c: ints[2])
+}
+
+//MARK: - C - T-shirts
+
+//func main() {
+//    let (N, M) = readTwoInts()
+//    let S = readLine()!.map { $0.wholeNumberValue! }
+//
+//    var usedMuji = 0
+//    var usedLogo = 0
+//
+//    var needLogo = 0
+//
+//    for plan in S {
+//        if plan == 0 {
+//            usedMuji = 0
+//            usedLogo = 0
+//        } else if plan == 1 {
+//            if usedMuji < M {
+//                usedMuji += 1
+//            } else {
+//                usedLogo += 1
+//            }
+//        } else if plan == 2 {
+//            usedLogo += 1
+//        }
+//
+//        needLogo = max(usedLogo, needLogo)
+//
+//    }
+//    print(needLogo)
+//}
+//
+//main()
+
 
 //MARK: - ABC 332
 //MARK: - A - Online Shopping

@@ -25,6 +25,7 @@ import Foundation
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
+// Input
 func readInts() -> [Int] {
     return readLine()!.split(separator: " ").map { Int(String($0))! }
 }
@@ -56,6 +57,15 @@ func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
 //
 //main()
 
+//MARK: - B - Next
+//func main() {
+//    let N = readLine()!
+//    let input = readInts()
+//    let max = input.max()!
+//    print(input.filter { $0 != max }.max()!)
+//}
+//
+//main()
 
 //MARK: - ABC 331
 //MARK: - A - Tomorrow

@@ -46,7 +46,15 @@ func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
 
 
 
+//MARK: - ABC 329
+//MARK: - A - Spread
 
+//func main() {
+//    let S = readLine()!
+//    print(S.map { String($0 }.joined(separator: " ") )
+//}
+//
+//main()
 
 
 //MARK: - ABC 331

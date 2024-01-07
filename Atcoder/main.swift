@@ -39,6 +39,14 @@ func readThreeInts() -> (a: Int, b: Int, c: Int) {
     return (a: ints[0], b: ints[1], c: ints[2])
 }
 
+func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
+    let ints = readLine()!.split(separator: " ").map { Int(String($0))! }
+    return (a: ints[0], b: ints[1], c: ints[2], d: ints[3])
+}
+
+
+
+
 
 
 //MARK: - ABC 331
@@ -61,6 +69,27 @@ func readThreeInts() -> (a: Int, b: Int, c: Int) {
 //    }
 //
 //    print("\(y) \(m) \(d)")
+//}
+//
+//main()
+
+//MARK: - B - Buy One Carton of Milk  /
+
+//func main() {
+//
+//    let (N, S, M, L) = readForInts()
+//
+//    var result = Int.max
+//
+//    for i in 0...(N / 6 + 1) {
+//        for j in 0...(N / 8 + 1) {
+//            for k in 0...(N / 12 + 1) {
+//                if i * 6 + j * 8 + k * 12 < N { continue }
+//                result = min(result, i * S + j * M + k * L)
+//            }
+//        }
+//    }
+//    print(result)
 //}
 //
 //main()

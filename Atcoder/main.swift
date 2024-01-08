@@ -46,6 +46,18 @@ func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
 }
 
 
+//MARK: - ABC 328
+//MARK: - A - Not Too Hard
+
+//func main() {
+//    let (_, X) = readTwoInts()
+//    let points = readInts()
+//    let sum = points.filter { $0 <= X }.reduce(0, +)
+//    print(sum)
+//}
+//
+//main()
+
 
 //MARK: - ABC 329
 //MARK: - A - Spread

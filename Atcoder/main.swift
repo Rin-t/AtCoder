@@ -19,13 +19,16 @@
 // AtCoder Beginners Selection
 // https://atcoder.jp/contests/abs
 
-import Foundation
-
-
 //MARK: - AtCoder Problems
 // https://kenkoooo.com/atcoder#/table/RinTake
 
+import Foundation
+
 // Input
+func readSingleInt() -> Int {
+    return Int(readLine()!)!
+}
+
 func readInts() -> [Int] {
     return readLine()!.split(separator: " ").map { Int(String($0))! }
 }
@@ -44,6 +47,131 @@ func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
     let ints = readLine()!.split(separator: " ").map { Int(String($0))! }
     return (a: ints[0], b: ints[1], c: ints[2], d: ints[3])
 }
+
+struct PriorityQueue<T> {
+    var elements: [T] = []
+    let priorityFunction: (T, T) -> Bool
+
+    init(priorityFunction: @escaping (T, T) -> Bool) {
+        self.priorityFunction = priorityFunction
+    }
+
+    var isEmpty: Bool {
+        return elements.isEmpty
+    }
+
+    mutating func enqueue(_ element: T) {
+        elements.append(element)
+        siftUp(from: elements.count - 1)
+    }
+
+    mutating func dequeue() -> T? {
+        guard !isEmpty else { return nil }
+        elements.swapAt(0, elements.count - 1)
+        let element = elements.removeLast()
+        if !isEmpty {
+            siftDown(from: 0)
+        }
+        return element
+    }
+
+    private mutating func siftUp(from index: Int) {
+        var childIndex = index
+        let child = elements[childIndex]
+        var parentIndex = self.parentIndex(ofChildAt: childIndex)
+
+        while childIndex > 0 && priorityFunction(child, elements[parentIndex]) {
+            elements[childIndex] = elements[parentIndex]
+            childIndex = parentIndex
+            parentIndex = self.parentIndex(ofChildAt: childIndex)
+        }
+
+        elements[childIndex] = child
+    }
+
+    private mutating func siftDown(from index: Int) {
+        var parentIndex = index
+        while true {
+            let leftChildIndex = self.leftChildIndex(ofParentAt: parentIndex)
+            let rightChildIndex = leftChildIndex + 1
+            var optionalSwapIndex: Int?
+
+            if leftChildIndex < elements.count && priorityFunction(elements[leftChildIndex], elements[parentIndex]) {
+                optionalSwapIndex = leftChildIndex
+            }
+
+            if rightChildIndex < elements.count && priorityFunction(elements[rightChildIndex], elements[optionalSwapIndex ?? parentIndex]) {
+                optionalSwapIndex = rightChildIndex
+            }
+
+            guard let swapIndex = optionalSwapIndex else { return }
+            elements.swapAt(parentIndex, swapIndex)
+            parentIndex = swapIndex
+        }
+    }
+
+    private func parentIndex(ofChildAt index: Int) -> Int {
+        return (index - 1) / 2
+    }
+
+    private func leftChildIndex(ofParentAt index: Int) -> Int {
+        return 2 * index + 1
+    }
+}
+
+// ダイクストラ法
+func dijkstra(graph: [[(to: Int, weight: Int)]], start: Int) -> [Int] {
+
+    var distance = [Int](repeating: Int.max, count: graph.count)
+    distance[start] = 0
+
+    var pq = PriorityQueue<(node: Int, distance: Int)>(priorityFunction: { $0.distance < $1.distance })
+    pq.enqueue((node: start, distance: 0))
+
+    while !pq.isEmpty {
+        let current = pq.dequeue()!
+
+        if current.distance > distance[current.node] {
+            continue
+        }
+
+        for edge in graph[current.node] {
+            let nextDistance = current.distance + edge.weight
+            if nextDistance < distance[edge.to] {
+                distance[edge.to] = nextDistance
+                pq.enqueue((node: edge.to, distance: nextDistance))
+            }
+        }
+    }
+
+    return distance
+}
+
+
+func main() {
+   
+}
+
+main()
+
+
+//MARK: - ABC 340
+//MARK: - D - Super Takahashi Bros.
+//func main() {
+//    let N = readSingleInt()
+//    var graph = [[(to: Int, weight: Int)]](repeating: [], count: N + 1)
+//    for i in 1..<N {
+//        let input = readThreeInts()
+//        graph[i].append((to: i + 1, weight: input.a))
+//        graph[i].append((to: input.c, weight: input.b))
+//    }
+//
+//    let result = dijkstra(graph: graph, start: 1)
+//
+//    print(result[N])
+//}
+//
+//main()
 
 
 //MARK: - ABC 328

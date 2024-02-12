@@ -24,7 +24,16 @@
 
 import Foundation
 
+
+func main() {
+}
+
+main()
+
+
+
 // Input
+// Int
 func readSingleInt() -> Int {
     return Int(readLine()!)!
 }
@@ -48,6 +57,13 @@ func readForInts() -> (a: Int, b: Int, c: Int, d: Int) {
     return (a: ints[0], b: ints[1], c: ints[2], d: ints[3])
 }
 
+// String
+
+func readStringsSeparatedByDot() -> [String] {
+    return readLine()!.split(separator: ".").map { String($0) }
+}
+
+// algorithm
 struct PriorityQueue<T> {
     var elements: [T] = []
     let priorityFunction: (T, T) -> Bool
@@ -147,12 +163,14 @@ func dijkstra(graph: [[(to: Int, weight: Int)]], start: Int) -> [Int] {
     return distance
 }
 
-
-func main() {
-   
-}
-
-main()
+//MARK: - ABC 339
+//MARK: - A
+//func main() {
+//    let N = readStringsSeparatedByDot()
+//    print(N.last!)
+//}
+//
+//main()
 
 
 //MARK: - ABC 340
